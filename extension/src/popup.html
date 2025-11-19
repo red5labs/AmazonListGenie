@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Wishlist Scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <h1 class="text-lg font-bold text-center m-2">Amazon Wishlist Scraper</h1>
+    
+    <div class="flex flex-col gap-3 p-3">
+      <button id="scrapeBtn" class="btn w-full">Scrape Wishlist</button>
+      
+      <div id="status" class="status text-center"></div>
+      
+      <div id="resultsContainer" class="hidden">
+        <div class="flex gap-2">
+          <button id="exportCSVBtn" class="btn btn-secondary flex-1">Export CSV</button>
+          <button id="exportJSONBtn" class="btn btn-secondary flex-1">Export JSON</button>
+        </div>
+        
+        <div class="scroll mt-3">
+          <table id="resultsTable" class="table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Item Name</th>
+                <th>ASIN</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody">
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="itemCount" class="text-sm text-gray-400 text-center mt-2"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
+
